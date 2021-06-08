@@ -41,7 +41,6 @@ body {
   align-content: space-between;
   left: 40px;
   top: 100px;
-  transform: rotate(45deg);
 }
 #main #stage #food > div {
   width: 4px;
