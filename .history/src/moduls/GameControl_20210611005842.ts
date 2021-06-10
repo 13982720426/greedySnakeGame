@@ -27,7 +27,7 @@ class GameControl {
   }
   //创建一个键盘按下的响应函数
   keydownHandler(event: KeyboardEvent) {
-    //需要检查event.key的值是否合法（用户是否按了正确的按键）
+    console.log(this)
 
     // 修改direction 属性
     this.direction = event.key
