@@ -85,7 +85,7 @@ class GameControl {
     this.snake.Y = Y
 
     //开启一个定时器
-    this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
+    setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
   }
 }
 

@@ -12,9 +12,6 @@ class GameControl {
   //创建一个属性来存储蛇的移动方向（也就是按键的方向）
   direction: string = ''
 
-  //创建一个属性来记录是否结束游戏
-  isLive = true
-
   constructor() {
     this.snake = new Snake()
     this.food = new Food()
@@ -27,9 +24,6 @@ class GameControl {
   init() {
     // 绑定键盘按键按下的事件
     document.addEventListener('keydown', this.keydownHandler.bind(this))
-
-    // 调用run方法，使蛇移动
-    this.run()
   }
   //创建一个键盘按下的响应函数
   keydownHandler(event: KeyboardEvent) {
@@ -39,7 +33,8 @@ class GameControl {
     this.direction = event.key
   }
 
-  /*
+  
+    /*
         Chrome       IE
         ArrowUp      Up
         ArrowDown    Down
@@ -47,46 +42,45 @@ class GameControl {
         ArrowRight   Right
     */
   // 创建一个控制蛇移动的方法
-  run() {
+  run{
     /**
      * 根据方向（this.direction）来使蛇的位置改变
      *  向上  top 减少
      *  向下  top 增加
      *  向左  left  减少
-     *  向右  left  增加
+     *  向右  left  增加 
      */
 
     // 先获取蛇现在坐标
-    let X = this.snake.X
-    let Y = this.snake.Y
+    let X=this.snake.X
+    let Y=this.snake.Y
 
     // 根据按键方向来修改X值和Y值
     switch (this.direction) {
-      case 'ArrowUp':
-      case 'Up':
-        Y -= 10
-        break
-      case 'ArrowDown':
-      case 'Down':
-        Y += 10
-        break
-      case 'ArrowLeft':
-      case 'Left':
-        X -= 10
-        break
-      case 'ArrowRight':
-      case 'Right':
-        X += 10
-        break
+      case "ArrowUp":
+      case "Up":
+        Y-=10
+         break;
+        case "ArrowDown":
+      case "Down":
+        Y+=10
+        break;
+          case "ArrowLeft":
+          case "Left":
+            X-=10
+            break;
+            case "ArrowRight":
+              case "Right":
+                X+=10
+                break;  
+      default:
+        break;
     }
 
-    //修改蛇的X和Y的值
-    this.snake.X = X
-    this.snake.Y = Y
-
-    //开启一个定时器
-    this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
   }
+
+
+
 }
 
 export default GameControl

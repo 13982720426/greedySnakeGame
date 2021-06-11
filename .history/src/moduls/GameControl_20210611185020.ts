@@ -12,9 +12,6 @@ class GameControl {
   //创建一个属性来存储蛇的移动方向（也就是按键的方向）
   direction: string = ''
 
-  //创建一个属性来记录是否结束游戏
-  isLive = true
-
   constructor() {
     this.snake = new Snake()
     this.food = new Food()
@@ -78,14 +75,13 @@ class GameControl {
       case 'Right':
         X += 10
         break
+      default:
+        break
     }
 
     //修改蛇的X和Y的值
     this.snake.X = X
     this.snake.Y = Y
-
-    //开启一个定时器
-    this.isLive && setTimeout(this.run.bind(this), 300 - (this.scorePanel.level - 1) * 30)
   }
 }
 
