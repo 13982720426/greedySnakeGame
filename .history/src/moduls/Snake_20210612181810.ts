@@ -47,8 +47,6 @@ class Snake {
     this.moveBody();
 
     this.head.style.left = value + 'px';
-    //检查有没有撞到自己
-    this.checkHeadBody();
   }
   set Y(value: number) {
     //如果新值和旧值相同，则不修改

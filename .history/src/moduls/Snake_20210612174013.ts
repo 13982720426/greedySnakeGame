@@ -47,8 +47,6 @@ class Snake {
     this.moveBody();
 
     this.head.style.left = value + 'px';
-    //检查有没有撞到自己
-    this.checkHeadBody();
   }
   set Y(value: number) {
     //如果新值和旧值相同，则不修改
@@ -75,8 +73,6 @@ class Snake {
     this.moveBody();
 
     this.head.style.top = value + 'px';
-    //检查有没有撞到自己
-    this.checkHeadBody();
   }
 
   // 蛇增加身体的方法
@@ -102,17 +98,6 @@ class Snake {
 
       (this.bodies[i] as HTMLElement).style.left = X + 'px';
       (this.bodies[i] as HTMLElement).style.top = Y + 'px';
-    }
-  }
-  //检查有没有撞到自己
-  checkHeadBody() {
-    //获取所有的身体，检查是否和蛇头的坐标发生重叠
-    for (let i = 1; i < this.bodies.length; i++) {
-      let bd = this.bodies[i] as HTMLElement;
-      if (this.X === bd.offsetLeft && this.Y === bd.offsetTop) {
-        //撞到身体，游戏结束
-        throw new Error('撞到自己了!');
-      }
     }
   }
 }
