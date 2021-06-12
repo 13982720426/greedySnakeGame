@@ -31,22 +31,19 @@ class Food {
     // 蛇移动一次就是一格，一格的大小就是10，所以就要求食物的坐标必须是整10
 
     //获取所有的身体，在非身体部分生成食物
-    for (let i = 0; i < this.bodies.length; i++) {
-      let left = Math.round(Math.random() * 29) * 10;
-      let top = Math.round(Math.random() * 29) * 10;
+    for (let i = 1; i < this.bodies.length; i++) {
       let bd = this.bodies[i] as HTMLElement;
-      //随机生成的位置不能和身体重合
-      if (left !== bd.offsetLeft && top !== bd.offsetTop) {
-        this.element.style.left = left + 'px';
-        this.element.style.top = top + 'px';
+      if (this.X === bd.offsetLeft && this.Y === bd.offsetTop) {
+        //撞到身体，游戏结束
+        throw new Error('撞到自己了!');
       }
     }
 
-    // let left = Math.round(Math.random() * 29) * 10;
-    // let top = Math.round(Math.random() * 29) * 10;
+    let left = Math.round(Math.random() * 29) * 10;
+    let top = Math.round(Math.random() * 29) * 10;
 
-    // this.element.style.left = left + 'px';
-    // this.element.style.top = top + 'px';
+    this.element.style.left = left + 'px';
+    this.element.style.top = top + 'px';
   }
 }
 

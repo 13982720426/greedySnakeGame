@@ -29,18 +29,28 @@ class Snake {
       return;
     }
     //X的值的合法范围0-290
-    if (value < 0 || value >= 300) {
-      //进入判断说明蛇撞墙了
-      throw new Error('蛇撞墙了！');
+    // if (value < 0 || value >= 300) {
+    //   //进入判断说明蛇撞墙了
+    //   throw new Error('蛇撞墙了！');
+    // }
+    if (value < 0) {
+      value = 290;
+      console.log('到左了');
+    }
+    if (value >= 300) {
+      value = 0;
+      console.log('到右了');
     }
 
     //修改X时,是修改水平坐标，蛇在左右移动，蛇不能掉头
     if (this.bodies[1] && (this.bodies[1] as HTMLElement).offsetLeft === value) {
       //如果发生了掉头，让蛇反向继续移动
-      if (value > this.X) {
+      if (value - this.X >= 10 || Math.abs(value - this.X) >= 280) {
         //如果新值value大于旧X，则说明蛇正在向右走，此时发生掉头，应该使蛇继续向右移动
         value = this.X - 10;
-      } else {
+      }
+      if (value - this.X <= 10 || Math.abs(value - this.X) >= 280) {
+        // else {
         //向左走
         value = this.X + 10;
       }
@@ -57,9 +67,17 @@ class Snake {
       return;
     }
     //Y的值的合法范围0-290
-    if (value < 0 || value >= 300) {
-      //进入判断说明蛇撞墙了
-      throw new Error('蛇撞墙了！');
+    // if (value < 0 || value >= 300) {
+    //   //进入判断说明蛇撞墙了
+    //   throw new Error('蛇撞墙了！');
+    // }
+    if (value < 0) {
+      value = 290;
+      console.log('到顶了');
+    }
+    if (value >= 300) {
+      value = 0;
+      console.log('到底了');
     }
 
     if (this.bodies[1] && (this.bodies[1] as HTMLElement).offsetTop === value) {

@@ -29,9 +29,17 @@ class Snake {
       return;
     }
     //X的值的合法范围0-290
-    if (value < 0 || value >= 300) {
-      //进入判断说明蛇撞墙了
-      throw new Error('蛇撞墙了！');
+    // if (value < 0 || value >= 300) {
+    //   //进入判断说明蛇撞墙了
+    //   throw new Error('蛇撞墙了！');
+    // }
+    if (value < 0) {
+      value = 290;
+      console.log('到左了');
+    }
+    if (value >= 300) {
+      value = 0;
+      console.log('到右了');
     }
 
     //修改X时,是修改水平坐标，蛇在左右移动，蛇不能掉头
