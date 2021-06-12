@@ -39,7 +39,7 @@ body {
   flex-flow: row wrap;
   justify-content: space-between;
   align-content: space-between;
-  left: 40px;
+  left: 30px;
   top: 100px;
 }
 #main #stage #food > div {

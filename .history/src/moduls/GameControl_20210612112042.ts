@@ -80,7 +80,10 @@ class GameControl {
         break
     }
 
-    // 检查蛇是否吃到食物
+    // // 检查蛇是否吃到食物
+    // if (this.checkEat(X, Y)) {
+    //   console.log('吃到食物')
+    // }
     this.checkEat(X, Y)
 
     //修改蛇的X和Y的值
@@ -99,19 +102,12 @@ class GameControl {
   }
   // 定义一个方法，检查蛇是否吃到食物
   checkEat(X: number, Y: number) {
-    if (
-      //此处有个bug，蛇的X、Y坐标超过50之后，个位数会加1 就变成了51 61 71...，解决办法是四舍五入
-      Math.round(X / 10) * 10 === Math.round(this.food.X / 10) * 10 &&
-      Math.round(Y / 10) * 10 === Math.round(this.food.Y / 10) * 10
-    ) {
-      console.log('吃到食物')
-      // 食物的位置进行重置
-      this.food.change()
-      //分数增加
-      this.scorePanel.addScore()
-      //蛇要增加一节
-      this.snake.addBody()
+    // return X === this.food.X && Y === this.food.Y
+    if (X === this.food.X && Y === this.food.Y) {
+      console.log(111)
     }
+    console.log(this.food.X, this.food.Y)
+    console.log(X, Y)
   }
 }
 

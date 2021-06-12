@@ -1,3 +1,5 @@
+import './style/index.less'
+
 //定义食物类
 class Food {
   // 定义一个属性表示食物所对应的元素
@@ -33,9 +35,7 @@ class Food {
 }
 
 // 测试代码
-// const food = new Food()
-// console.log(food.X, food.Y)
-// food.change()
-// console.log(food.X, food.Y)
-
-export default Food
+const food = new Food()
+console.log(food.X, food.Y)
+// food.change();
+// console.log(food.X, food.Y);
