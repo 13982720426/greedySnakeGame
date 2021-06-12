@@ -3,10 +3,15 @@ class Food {
   // 定义一个属性表示食物所对应的元素
   private element: HTMLElement;
 
+  // 蛇的身体(包括蛇头)
+  bodies: HTMLCollection;
+
   constructor() {
     // 获取页面中的food元素并将其赋值给element
     // 末尾加上叹号，表示id为food的元素必定存在（非空）
     this.element = document.getElementById('food')!;
+
+    this.bodies = document.getElementById('snake')!.getElementsByTagName('div');
   }
 
   // 定义一个获取食物X轴坐标的方法

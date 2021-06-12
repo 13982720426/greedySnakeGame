@@ -69,6 +69,7 @@ class GameControl {
       case 'ArrowDown':
       case 'Down':
         Y += 10;
+
         break;
       case 'ArrowLeft':
       case 'Left':

@@ -32,6 +32,9 @@ class ScorePanel {
   levelUp() {
     if (this.level < this.maxLevel) {
       this.levelEle.innerHTML = ++this.level + '';
+      if ((this.maxLevel = 10)) {
+        throw new Error('恭喜通关！');
+      }
     }
   }
 }

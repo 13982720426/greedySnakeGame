@@ -65,6 +65,7 @@ class GameControl {
       case 'ArrowUp':
       case 'Up':
         Y -= 10;
+        if (this.direction === 'ArrowUp' || 'Up') Y -= 10;
         break;
       case 'ArrowDown':
       case 'Down':

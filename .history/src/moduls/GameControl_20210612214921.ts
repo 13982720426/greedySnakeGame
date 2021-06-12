@@ -99,6 +99,15 @@ class GameControl {
   }
   // 定义一个方法，检查蛇是否吃到食物
   checkEat(X: number, Y: number) {
+    //获取所有的身体，检查是否和蛇头的坐标发生重叠
+    for (let i = 1; i < this.bodies.length; i++) {
+      let bd = this.bodies[i] as HTMLElement;
+      if (this.X === bd.offsetLeft && this.Y === bd.offsetTop) {
+        //撞到身体，游戏结束
+        throw new Error('撞到自己了!');
+      }
+    }
+
     if (
       //此处有个bug，蛇的X、Y坐标超过50之后，个位数会加1 就变成了51 61 71...，解决办法是四舍五入
       Math.round(X / 10) * 10 === Math.round(this.food.X / 10) * 10 &&

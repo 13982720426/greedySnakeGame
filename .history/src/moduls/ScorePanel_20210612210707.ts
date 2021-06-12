@@ -32,6 +32,8 @@ class ScorePanel {
   levelUp() {
     if (this.level < this.maxLevel) {
       this.levelEle.innerHTML = ++this.level + '';
+      if ((this.maxLevel = 10)) {
+      }
     }
   }
 }

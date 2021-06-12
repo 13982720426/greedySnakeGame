@@ -65,18 +65,25 @@ class GameControl {
       case 'ArrowUp':
       case 'Up':
         Y -= 10;
+        if (this.direction === 'ArrowUp' || 'Up') Y -= 10;
         break;
       case 'ArrowDown':
       case 'Down':
         Y += 10;
+        if (this.direction === 'ArrowDown' || 'Down') Y -= 10;
+
         break;
       case 'ArrowLeft':
       case 'Left':
         X -= 10;
+        if (this.direction === 'ArrowLeft' || 'Left') Y -= 10;
+
         break;
       case 'ArrowRight':
       case 'Right':
         X += 10;
+        if (this.direction === 'ArrowRight' || 'Right') Y -= 10;
+
         break;
     }
 
