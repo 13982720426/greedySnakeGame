@@ -28,23 +28,10 @@ class Snake {
     if (this.X === value) {
       return
     }
-    //X的值的合法范围0-290
-    if (value < 0 || value >= 300) {
-      //进入判断说明蛇撞墙了
-      throw new Error('蛇撞墙了！')
-    }
+
     this.head.style.left = value + 'px'
   }
   set Y(value: number) {
-    //如果新值和旧值相同，则不修改
-    if (this.Y === value) {
-      return
-    }
-    //Y的值的合法范围0-290
-    if (value < 0 || value >= 300) {
-      //进入判断说明蛇撞墙了
-      throw new Error('蛇撞墙了！')
-    }
     this.head.style.top = value + 'px'
   }
 

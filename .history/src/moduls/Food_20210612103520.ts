@@ -29,13 +29,14 @@ class Food {
 
     this.element.style.left = left + 'px'
     this.element.style.top = top + 'px'
+    console.log(this.element.style.left, this.element.style.top)
   }
 }
 
 // 测试代码
-const food = new Food()
-console.log(food.X, food.Y)
-// food.change()
-// console.log(food.X, food.Y)
+// const food =  new Food();
+// console.log(food.X, food.Y);
+// food.change();
+// console.log(food.X, food.Y);
 
 export default Food

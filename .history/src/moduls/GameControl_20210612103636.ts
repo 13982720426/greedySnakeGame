@@ -106,7 +106,7 @@ class GameControl {
     // if (X === this.food.X && Y === this.food.Y) {
     //   console.log(111)
     // }
-    // console.log(this.food.X, this.food.Y)
+    console.log(this.food.X, this.food.Y)
   }
 }
 

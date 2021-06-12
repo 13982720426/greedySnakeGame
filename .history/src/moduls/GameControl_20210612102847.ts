@@ -80,11 +80,10 @@ class GameControl {
         break
     }
 
-    // // 检查蛇是否吃到食物
-    // if (this.checkEat(X, Y)) {
-    //   console.log('吃到食物')
-    // }
-    this.checkEat(X, Y)
+    // 检查蛇是否吃到食物
+    if (this.checkEat(X, Y)) {
+      console.log('吃到食物')
+    }
 
     //修改蛇的X和Y的值
     try {
@@ -103,10 +102,9 @@ class GameControl {
   // 定义一个方法，检查蛇是否吃到食物
   checkEat(X: number, Y: number) {
     // return X === this.food.X && Y === this.food.Y
-    // if (X === this.food.X && Y === this.food.Y) {
-    //   console.log(111)
-    // }
-    // console.log(this.food.X, this.food.Y)
+    if (X === this.food.X && Y === this.food.Y) {
+      console.log(111)
+    }
   }
 }
 

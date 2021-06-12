@@ -59,6 +59,7 @@ class GameControl {
     // 先获取蛇现在坐标
     let X = this.snake.X
     let Y = this.snake.Y
+    console.log(this.snake.X)
 
     // 根据按键方向来修改X值和Y值
     switch (this.direction) {

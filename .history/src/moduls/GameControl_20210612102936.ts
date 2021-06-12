@@ -103,10 +103,9 @@ class GameControl {
   // 定义一个方法，检查蛇是否吃到食物
   checkEat(X: number, Y: number) {
     // return X === this.food.X && Y === this.food.Y
-    // if (X === this.food.X && Y === this.food.Y) {
-    //   console.log(111)
-    // }
-    // console.log(this.food.X, this.food.Y)
+    if (X === this.food.X && Y === this.food.Y) {
+      console.log(111)
+    }
   }
 }
 

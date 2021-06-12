@@ -11,6 +11,8 @@ class Food {
 
   // 定义一个获取食物X轴坐标的方法
   get X() {
+    console.log(this.element.offsetLeft)
+
     return this.element.offsetLeft
   }
 
@@ -33,9 +35,9 @@ class Food {
 }
 
 // 测试代码
-const food = new Food()
-console.log(food.X, food.Y)
-// food.change()
-// console.log(food.X, food.Y)
+// const food =  new Food();
+// console.log(food.X, food.Y);
+// food.change();
+// console.log(food.X, food.Y);
 
 export default Food

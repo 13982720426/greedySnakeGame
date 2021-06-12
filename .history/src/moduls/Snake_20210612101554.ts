@@ -29,7 +29,7 @@ class Snake {
       return
     }
     //X的值的合法范围0-290
-    if (value < 0 || value >= 300) {
+    if (value < 0 || value >= 290) {
       //进入判断说明蛇撞墙了
       throw new Error('蛇撞墙了！')
     }
@@ -41,7 +41,7 @@ class Snake {
       return
     }
     //Y的值的合法范围0-290
-    if (value < 0 || value >= 300) {
+    if (value < 0 || value >= 290) {
       //进入判断说明蛇撞墙了
       throw new Error('蛇撞墙了！')
     }
