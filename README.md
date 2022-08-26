@@ -5,4 +5,5 @@
 http://snake.jackhoo.icu/ 
 
 新地址
-https://13982720426.github.io/greedySnakeGame/dist/index.html
+[https://13982720426.github.io/greedySnakeGame/dist/index.html](https://13982720426.github.io/greedySnakeGame/dist/index.html)
+
